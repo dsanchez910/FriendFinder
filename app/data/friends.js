@@ -12,7 +12,7 @@ var friendMatch = [
       photo: "https://cdn.newsday.com/polopoly_fs/1.34072344.1563663574!/httpImage/image.jpg_gen/derivatives/landscape_768/image.jpg",
       scores: ["1", "1", "1", "1", "1"]
     }, {
-      name: "Christen Press",
+      name: "Barack Obama",
       photo: "https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg",
       scores: ["2", "3", "2", "3", "1"]
     },
