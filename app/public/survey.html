@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Friend Finder Survey</title>
 
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -30,6 +29,10 @@
             <span class="input-group-addon">(Required)</span>
           </div>  
           <br>
+          <h4>Link to a Photo Image</h4>
+          <div class="input-group">
+            <input id = "formImage" class="form-control" type="text" name="name">
+            <span class="input-group-addon">(Required)</span>
           </div>
         </div>
       
@@ -46,7 +49,7 @@
             <option value=""></option>
             <option value="1">1 Yes</option>
             <option value="2">2 No</option>
-            <option value="3">3 Not Really</option>
+            <option value="3">3 Not Much</option>
           </select>
          
           <h4><strong>Question 2</strong></h4>
@@ -55,7 +58,7 @@
             <option value=""></option>
             <option value="1">1 Yes</option>
             <option value="2">2 No</option>
-            <option value="3">3 Not Really</option>
+            <option value="3">3 Not Often</option>
           </select>
 
    
@@ -65,7 +68,7 @@
             <option value=""></option>
             <option value="1">1 Yes</option>
             <option value="2">2 No</option>
-            <option value="3">3 Not Really</option>
+            <option value="3">3 Not Sure</option>
           </select>
 
           
@@ -85,7 +88,7 @@
             <option value=""></option>
             <option value="1">1 Yes</option>
             <option value="2">2 No</option>
-            <option value="3">3 Not Really</option>
+            <option value="3">3 Not Often</option>
           </select>
 
         </div>
@@ -95,8 +98,7 @@
       
       <button id="submitButton" type="submit" class="btn btn-lg btn-primary btn-block"><h4>Submit</h4></button> 
   
-
-      
+      <br>
 
       
       <div id="resultsModal" class="modal fade" role="dialog">
@@ -164,9 +166,9 @@
                 ]
             };
              
-            var currentURL = window.location.origin;
+            
              
-            $.post(currentURL + "/api/friends", newFriend, function(data) {
+            $.post("/api/friends", newFriend, function(data) {
                 
                 $("#matchName").text(data.name);
                 $("#matchImg").attr("src", data.photo);
@@ -188,6 +190,7 @@
     });
 });
 </script>
+
 
 
 
